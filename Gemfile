@@ -9,6 +9,8 @@ gem 'devise'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+gem "tailwindcss-rails", "~> 2.3"
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 

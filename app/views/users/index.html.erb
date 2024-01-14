@@ -1,10 +1,10 @@
 <section>
-  <ul class="col-md-12">
+  <ul class="container text-center pt-20">
     <% @users&.each do |user| %>
-      <li class="col-md-4">
+      <li class="pb-20">
 
         <%= link_to user_path(user) do %>
-          <h5 class="card-title"><%= user.username %></h5>
+          <h5 class="text-xl"><%= user.username %></h5>
         <% end %>  
           <p><%= user.bio %></p>
         
