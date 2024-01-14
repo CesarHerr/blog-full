@@ -1,9 +1,14 @@
 <section>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h1>Hello</h1>
-      </div>
-    </div>
-  </div>
+  <ul class="col-md-12">
+    <% @users&.each do |user| %>
+      <li class="col-md-4">
+
+        <%= link_to user_path(user) do %>
+          <h5 class="card-title"><%= user.username %></h5>
+        <% end %>  
+          <p><%= user.bio %></p>
+        
+      </li>
+    <% end %>
+  </ul>
 </section>

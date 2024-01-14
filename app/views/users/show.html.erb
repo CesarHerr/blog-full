@@ -1,0 +1,10 @@
+<section>
+  <h1>this is the show</h1>
+  <h2><%= @user.name %></h2>
+  <%= link_to users_path do %>
+    <p>Back to index</p>
+  <% end %>
+  <%= link_to user_posts_path(@user) do %>
+    <p>See all posts</p>
+  <% end %>
+</section>
