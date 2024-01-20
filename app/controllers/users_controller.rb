@@ -13,4 +13,23 @@ class UsersController < ApplicationController
     flash[:alert] = 'User not found'
     redirect_to users_path
   end
+
+  def edit
+    @user = current_user
+  end
+
+  def update
+    if current_user.update(user_params)
+      flash[:notice] = 'User updated'
+    else
+      flash[:alert] = 'User not updated'
+    end
+    redirect_to edit_user_path(current_user)
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:name, :username, :bio, :photo, :country)
+  end
 end
