@@ -1,0 +1,32 @@
+<section>
+  <%= form_with model: @user, method: :patch do |form| %>
+    <div>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
+
+    <div>
+      <%= form.label :username %>
+      <%= form.text_field :username %>
+    </div>
+
+    <div>
+      <%= form.label :bio %>
+      <%= form.text_field :bio %>
+    </div>
+
+    <div>
+      <%= form.label :photo %>
+      <%= form.text_field :photo %>
+    </div>
+
+    <div>
+      <%= form.label :country %>
+      <%= form.text_field :country %>
+    </div>
+
+    <%= form.submit "Update" %>
+  <% end %>
+
+
+</section>
