@@ -1,5 +1,8 @@
 <section>
-  <ul class="container text-center pt-20">
+  <% if current_user.present? %>
+    <%= link_to "My perfil", edit_user_path(current_user) %>
+  <% end %>
+  <ul class="text-center pt-20">
     <% @users&.each do |user| %>
       <li class="pb-20">
 
