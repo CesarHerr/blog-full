@@ -1,6 +1,6 @@
 <section>
   <% if current_user.present? %>
-    <%= link_to "My perfil", edit_user_path(current_user) %>
+    <%= link_to "My profile", edit_user_path(current_user) %>
   <% end %>
   <ul class="text-center pt-20">
     <% @users&.each do |user| %>
